@@ -1,45 +1,25 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-
-
-import SideDrawer from './components/SideDrawer'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
+import Navbar from './components/Navbar';
+import HebrewDate from './components/HebrewDate';
+import DateContextProvider from './contexts/DateContext';
+import DatePicker from './components/DatePicker'
+import Grid from '@material-ui/core/Grid';
 
 function App() {
-  const classes = useStyles();
   return (
-    <div className="App">
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <SideDrawer />
-              
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Chabad Virtual Yeshiva of Vienna
-          </Typography>
+    <div className="App" >
+      <Navbar />
+      <DateContextProvider>
+        <HebrewDate m={10} />
+      </DateContextProvider>
+      <Grid
+        container
+        direction="row"
 
-          </Toolbar>
-        </AppBar>
-      </div>
+        align="center"
+      >
+        <DatePicker />
+      </Grid>
     </div>
   );
 }
