@@ -1,25 +1,15 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import HebrewDate from './components/HebrewDate';
 import DateContextProvider from './contexts/DateContext';
-import DatePicker from './components/DatePicker'
-import Grid from '@material-ui/core/Grid';
+import Navbar from './components/Navbar';
+import DatePanel from './components/DatePanel';
 
 function App() {
   return (
     <div className="App" >
       <Navbar />
       <DateContextProvider>
-        <HebrewDate m={10} />
+        <DatePanel />
       </DateContextProvider>
-      <Grid
-        container
-        direction="row"
-
-        align="center"
-      >
-        <DatePicker />
-      </Grid>
     </div>
   );
 }
