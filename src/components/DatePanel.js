@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import { DateContext } from '../contexts/DateContext'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import HebrewDate from './DatePanelHebrewDate'
-import DatePicker from './DatePanelDatePicker'
+import DatePanelHebrewDate from './DatePanelHebrewDate'
+import DatePanelDatePicker from './DatePanelDatePicker'
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +39,7 @@ const DatePanel = () => {
 
     return (
         <div>
-            <HebrewDate handleOpen={handleOpen} />
+            <DatePanelHebrewDate handleOpen={handleOpen} />
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -52,7 +52,7 @@ const DatePanel = () => {
                         direction="row"
                         align="center"
                     >
-                        <DatePicker date={date} goToDate={goToDate} />
+                        <DatePanelDatePicker date={date} goToDate={goToDate} />
                     </Grid>
                 </div>
             </Modal>

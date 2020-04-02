@@ -26,13 +26,13 @@ const DatePanelHebrewDate = ({ handleOpen }) => {
                     alignItems="center"
                 >
                     <Button onClick={() => { goToDate(-1) }}>
-                        <ArrowBackIosIcon />
+                        <ArrowBackIosIcon style={{ fill: "white" }} />
                     </Button>
                     <div onClick={handleOpen}>
                         {date.hebrew.date} {date.hebrew.month_name}, {date.hebrew.year}
                     </div>
                     <Button onClick={() => { goToDate(+1) }}>
-                        <ArrowForwardIosIcon />
+                        <ArrowForwardIosIcon style={{ fill: "white" }} />
                     </Button>
                 </Grid>
             </Typography>
