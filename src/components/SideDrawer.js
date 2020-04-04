@@ -12,15 +12,12 @@ import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 import HomeIcon from './icons/HomeIcon'
 import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
 import PermPhoneMsgOutlinedIcon from '@material-ui/icons/PermPhoneMsgOutlined';
+import { Icon, InlineIcon } from '@iconify/react'
+import whatsappIcon from '@iconify/icons-mdi/whatsapp'
+import bookIcon from '@iconify/icons-bytesize/book'
+import listAlt from '@iconify/icons-el/list-alt'
 
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
+
 
 export default function SideDrawer() {
   const classes = useStyles();
@@ -38,22 +35,20 @@ export default function SideDrawer() {
     window.open('https://www.whatsapp.com/', '_blank');
   }
 
-  const list = (anchor) => (
+  const list = () => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
+      className={clsx(classes.list)}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem button key='Seider Schedule' >
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText primary='Seider Schedule' />
+
+        <ListItem button key={listProperties[0].text} >
+          {listProperties[0].icon}
+          <ListItemText primary={listProperties[0].text} />
         </ListItem>
+
         <ListItem button key='Haores HaTmimim' >
           <ListItemIcon>
             <EditOutlinedIcon />
@@ -62,13 +57,13 @@ export default function SideDrawer() {
         </ListItem>
         <ListItem button key='Daily Shiurim' >
           <ListItemIcon>
-            <LocalLibraryOutlinedIcon />
+            <Icon icon={bookIcon} style={styles.bookIconStyle} />
           </ListItemIcon>
           <ListItemText primary='Daily Shiurim' />
         </ListItem>
         <ListItem button key='WhatsApp Group' onClick={openWhatsApp}>
           <ListItemIcon>
-            <PermPhoneMsgOutlinedIcon />
+            <Icon icon={whatsappIcon} style={styles.whatsappIconStyle} />
           </ListItemIcon>
           <ListItemText primary='WhatsApp Group' />
         </ListItem>
@@ -87,3 +82,38 @@ export default function SideDrawer() {
     </div>
   );
 }
+
+const useStyles = makeStyles({
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
+});
+
+const styles = {
+  listAlt: {
+    fontSize: '1.8em',
+    marginRight: '12%'
+  }
+  ,
+  bookIconStyle: {
+    fontSize: '1.8em',
+    marginRight: '12%'
+  },
+  whatsappIconStyle: {
+    fontSize: '1.8em'
+  }
+}
+
+const listProperties = [
+  {
+    text: 'Daily Schedule',
+    icon: <ListItemIcon><Icon icon={listAlt} style={styles.listAlt} /></ListItemIcon>,
+    link: '',
+  }
+]
+
+
+

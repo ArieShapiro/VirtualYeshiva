@@ -16,9 +16,25 @@ export default ShiurimContextProvider;
 
 const initShiurim = () => {
     return [
-        { date: new Date(), rabbi: 'Rav Catorza', subject: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973', time: '13:00' },
-        { date: new Date(), rabbi: 'Rav Niazov', subject: 'The aspect of Simcha', zoomLink: 'https://zoom.us/j/621516973', time: '13:00' },
-        { date: new Date((new Date()).setDate((new Date()).getDate()+1)), rabbi: 'Rav Boas', subject: 'Hachono for Pesach', zoomLink: 'https://zoom.us/j/621516973', time: '13:00' },
+        { date: new Date(), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date(), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date(), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+2)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+2)), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+5)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chavruta', time: '13:30', description: 'Free choice', zoomLink: 'https://zoom.us/j/621516973' },
+        { date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim', zoomLink: 'https://zoom.us/j/621516973' },
+        
         
     ]
 }

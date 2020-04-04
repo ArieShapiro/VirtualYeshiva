@@ -7,43 +7,34 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box'
 
 const ShiurDetails = ({ details }) => {
     const classes = useStyles();
     return (
         <div>
             <List className={classes.root}>
-
-                <ListItem alignItems="flex-start">
-
-                    <ListItemAvatar>
-                        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                    </ListItemAvatar>
-
-                    <ListItemText
-                        primary={`${details.rabbi}`}
-                        secondary={
-                            <React.Fragment>
-
-                                <Typography
-                                    component="span"
-                                    variant="body2"
-                                    className={classes.inline}
-                                    color="textPrimary"
-                                >
-                                    {details.time} -
-                             </Typography>
-
-                                {'   ' + details.subject}
-                            </React.Fragment>
-                            
-                        }
-                    />
-
-                </ListItem>
-
+                <Box ml={8}>
+                    <ListItem alignItems="flex-start">
+                        <ListItemText
+                            primary={`${details.title}`}
+                            secondary={
+                                <React.Fragment>
+                                    <Typography
+                                        component="span"
+                                        variant="body2"
+                                        className={classes.inline}
+                                        color="textPrimary"
+                                    >
+                                        {details.time} -
+                                    </Typography>
+                                    {'   ' + details.description}
+                                </React.Fragment>
+                            }
+                        />
+                    </ListItem>
+                </Box>
                 <Divider variant="inset" component="li" />
-
             </List>
         </div>
     );
@@ -60,4 +51,11 @@ const useStyles = makeStyles((theme) => ({
     inline: {
         display: 'inline',
     },
+    avatarSize: {
+        width: theme.spacing(6),
+        height: theme.spacing(6),
+        marginRight: '15px',
+        fontSize: '4em'
+    },
+
 }));

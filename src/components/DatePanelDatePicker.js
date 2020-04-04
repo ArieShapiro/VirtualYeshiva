@@ -2,6 +2,7 @@ import 'date-fns';
 import React, { useState } from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
+import Button from '@material-ui/core/Button';
 
 const DatePanelDatePicker = ({ date, goToDate }) => {
     const [selectedDate, setSelectedDate] = useState(date.greg);
@@ -22,7 +23,13 @@ const DatePanelDatePicker = ({ date, goToDate }) => {
                     'aria-label': 'change date',
                 }}
             />
-            <button onClick={() => { goToDate(selectedDate) }}>GO</button>
+            <Button
+                onClick={() => { goToDate(selectedDate) }}
+                variant="contained"
+                color="primary"
+                href="#contained-buttons">
+                GO
+            </Button>
         </MuiPickersUtilsProvider>
     );
 }
