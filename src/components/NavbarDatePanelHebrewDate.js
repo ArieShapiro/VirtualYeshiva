@@ -16,6 +16,7 @@ const DatePanelHebrewDate = ({ handleOpen }) => {
             date: d
         })
     }
+    console.log(date.greg)
     return (
         <div>
             <Typography variant="h6" align="justify" >
@@ -29,7 +30,7 @@ const DatePanelHebrewDate = ({ handleOpen }) => {
                         <ArrowBackIosIcon style={{ fill: "white" }} />
                     </Button>
                     <div onClick={handleOpen}>
-                        {date.hebrew.date} {date.hebrew.month_name}, {date.hebrew.year}
+                        {getDayOfTheWeek(date.greg.getDay())}, {date.hebrew.date} {date.hebrew.month_name}, {date.hebrew.year}
                     </div>
                     <Button onClick={() => { goToDate(+1) }}>
                         <ArrowForwardIosIcon style={{ fill: "white" }} />
@@ -41,3 +42,22 @@ const DatePanelHebrewDate = ({ handleOpen }) => {
 }
 
 export default DatePanelHebrewDate;
+
+const getDayOfTheWeek = (num) => {
+    switch (num) {
+        case 0:
+            return 'Sun'
+        case 1:
+            return 'Mon'
+        case 2:
+            return 'Tue'
+        case 3:
+            return 'Wed'
+        case 4:
+            return 'Thu'
+        case 5:
+            return 'Fri'
+        case 6:
+            return 'Sat'
+    }
+}

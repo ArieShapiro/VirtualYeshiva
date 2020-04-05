@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import DatePanel from './NavbarDatePanel';
-import Box from '@material-ui/core/Box'
 import SideDrawer from './SideDrawer'
 
 const Navbar = () => {
@@ -17,9 +16,7 @@ const Navbar = () => {
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <SideDrawer />
                     </IconButton>
-                    <Box ml={3}>
                         <DatePanel />
-                    </Box>
                 </Toolbar>
             </AppBar>
         </div>

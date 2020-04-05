@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import { DateContext } from '../contexts/DateContext'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import DatePanelHebrewDate from './DatePanelHebrewDate'
-import DatePanelDatePicker from './DatePanelDatePicker'
+import DatePanelHebrewDate from './NavbarDatePanelHebrewDate'
+import DatePanelDatePicker from './NavbarDatePanelDatePicker'
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
