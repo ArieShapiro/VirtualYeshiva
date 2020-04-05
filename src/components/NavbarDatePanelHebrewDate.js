@@ -5,6 +5,19 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton'
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& > *': {
+            margin: theme.spacing(0),
+            width: '0'
+        },
+    },
+}));
 
 const DatePanelHebrewDate = ({ handleOpen }) => {
     const { date, dispatch } = useContext(DateContext)
@@ -16,25 +29,35 @@ const DatePanelHebrewDate = ({ handleOpen }) => {
             date: d
         })
     }
-    console.log(date.greg)
+    const classes = useStyles();
     return (
         <div>
-            <Typography variant="h6" align="justify" >
+            <Typography variant="h6" align="strech" >
                 <Grid
                     container
                     direction="row"
-                    justify="space-between"
+                    alignContent="stretch"
                     alignItems="center"
                 >
-                    <Button onClick={() => { goToDate(-1) }}>
-                        <ArrowBackIosIcon style={{ fill: "white" }} />
-                    </Button>
-                    <div onClick={handleOpen}>
+                    <IconButton
+                        onClick={() => { goToDate(-1) }}
+                        edge="start"
+                        className={classes.menuButton}
+                        color="inherit"
+                        aria-label="menu">
+                        <NavigateBeforeIcon style={{ fill: "white" }} />
+                    </IconButton>
+                    <div onClick={handleOpen} style={{ fontSize: '0.8em' }}>
                         {getDayOfTheWeek(date.greg.getDay())}, {date.hebrew.date} {date.hebrew.month_name}, {date.hebrew.year}
                     </div>
-                    <Button onClick={() => { goToDate(+1) }}>
-                        <ArrowForwardIosIcon style={{ fill: "white" }} />
-                    </Button>
+                    <IconButton
+                        onClick={() => { goToDate(+1) }}
+                        edge="start"
+                        className={classes.menuButton}
+                        color="inherit"
+                        aria-label="menu">
+                        <NavigateNextIcon style={{ fill: "white", marginLeft: '8px' }} />
+                    </IconButton>
                 </Grid>
             </Typography>
         </div>

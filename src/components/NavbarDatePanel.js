@@ -6,17 +6,7 @@ import DatePanelHebrewDate from './NavbarDatePanelHebrewDate'
 import DatePanelDatePicker from './NavbarDatePanelDatePicker'
 import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        position: 'absolute',
-        width: 200,
-        height: 90,
-        backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
-    },
-}));
+
 
 const DatePanel = () => {
     const { date, dispatch } = useContext(DateContext)
@@ -67,4 +57,15 @@ const modalStyle = {
     left: '18vw'
 }
 
+const useStyles = makeStyles((theme) => ({
+    paper: {
+        position: 'absolute',
+        width: 200,
+        height: 90,
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+    },
+}));
 

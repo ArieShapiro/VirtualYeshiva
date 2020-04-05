@@ -1,11 +1,11 @@
 import React from 'react'
-import DateContextProvider from '../contexts/DateContext';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import DatePanel from './NavbarDatePanel';
+import NavbarDatePanel from './NavbarDatePanel';
 import SideDrawer from './SideDrawer'
+import Box from '@material-ui/core/Box'
 
 const Navbar = () => {
     const classes = useStyles();
@@ -13,10 +13,16 @@ const Navbar = () => {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <IconButton
+                        edge="start"
+                        className={classes.menuButton}
+                        color="inherit"
+                        aria-label="menu">
                         <SideDrawer />
                     </IconButton>
-                        <DatePanel />
+                    <Box style={{margin:'auto'}}>
+                        <NavbarDatePanel />
+                    </Box>
                 </Toolbar>
             </AppBar>
         </div>
@@ -30,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
-        marginRight: theme.spacing(2),
+        // marginRight: theme.spacing(2),
+        // fontSize: '1.3em'
     },
     title: {
         flexGrow: 1,

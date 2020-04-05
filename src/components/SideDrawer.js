@@ -16,6 +16,10 @@ import { Icon, InlineIcon } from '@iconify/react'
 import whatsappIcon from '@iconify/icons-mdi/whatsapp'
 import bookIcon from '@iconify/icons-bytesize/book'
 import listAlt from '@iconify/icons-el/list-alt'
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import ForumIcon from '@material-ui/icons/Forum';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 
 
 
@@ -48,25 +52,56 @@ export default function SideDrawer() {
           {listProperties[0].icon}
           <ListItemText primary={listProperties[0].text} />
         </ListItem>
-
+        <Divider />
         <ListItem button key='Haores HaTmimim' >
           <ListItemIcon>
             <EditOutlinedIcon />
           </ListItemIcon>
           <ListItemText primary='Haores HaTmimim' />
         </ListItem>
+        <Divider />
         <ListItem button key='Daily Shiurim' >
           <ListItemIcon>
             <Icon icon={bookIcon} style={styles.bookIconStyle} />
           </ListItemIcon>
           <ListItemText primary='Daily Shiurim' />
         </ListItem>
+        <Divider />
         <ListItem button key='WhatsApp Group' onClick={openWhatsApp}>
           <ListItemIcon>
             <Icon icon={whatsappIcon} style={styles.whatsappIconStyle} />
           </ListItemIcon>
           <ListItemText primary='WhatsApp Group' />
         </ListItem>
+        <Divider />
+        <ListItem button key='End of Shema' >
+          <ListItemIcon>
+            <AccessAlarmIcon style={styles.whatsappIconStyle} />
+          </ListItemIcon>
+          <ListItemText primary='End of Shema' />
+        </ListItem>
+        <Divider />
+        <ListItem button key='Contact' >
+          <ListItemIcon>
+            <ContactMailIcon />
+          </ListItemIcon>
+          <ListItemText primary='Contact' />
+        </ListItem>
+        <Divider />
+        <ListItem button key='Live Chat' >
+          <ListItemIcon>
+            <ForumIcon style={styles.whatsappIconStyle} />
+          </ListItemIcon>
+          <ListItemText primary='Live Chat' />
+        </ListItem>
+        <Divider />
+        <ListItem button key='Donate'>
+          <ListItemIcon>
+            <CreditCardIcon style={styles.whatsappIconStyle} />
+          </ListItemIcon>
+          <ListItemText primary='Donate' />
+        </ListItem>
+        <Divider />
       </List>
     </div>
   );
@@ -74,7 +109,7 @@ export default function SideDrawer() {
   return (
     <div>
       <React.Fragment key='left'>
-        <MenuOutlinedIcon onClick={toggleDrawer(true)} />
+        <MenuOutlinedIcon onClick={toggleDrawer(true)} style={{ fontSize: '1.45em' }} />
         <Drawer anchor='left' open={isOpen} onClose={toggleDrawer(false)}>
           {list()}
         </Drawer>
@@ -104,7 +139,8 @@ const styles = {
   },
   whatsappIconStyle: {
     fontSize: '1.8em'
-  }
+  },
+  alarmClockIconStyle: {}
 }
 
 const listProperties = [

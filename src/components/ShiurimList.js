@@ -8,7 +8,7 @@ const ShiurimList = () => {
     const { shiurim } = useContext(ShiurimContext)
 
     return (
-        <div style={styles}>
+        <div>
             {(shiurim.filter(shiur => {
                 return shiur.date.getDate() === date.greg.getDate()
             })).map(shiur => {
@@ -20,6 +20,3 @@ const ShiurimList = () => {
 
 export default ShiurimList;
 
-const styles = {
-    marginLeft: '8%'
-}

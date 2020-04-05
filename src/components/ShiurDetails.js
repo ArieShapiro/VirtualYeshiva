@@ -12,29 +12,33 @@ const ShiurDetails = ({ details }) => {
     return (
         <div>
             <List className={classes.root}>
-                <Box ml={8}>
+                <Box ml={5}>
                     <ListItem alignItems="flex-start">
                         <ListItemText
-                            primary={`${details.title}`}
+                            primary={`${details.time} - ${details.title}`}
                             secondary={
                                 <React.Fragment>
-                                    <Typography
+                                    {/* <Typography
                                         component="span"
                                         variant="body2"
                                         className={classes.inline}
                                         color="textPrimary"
                                     >
                                         {details.time} -
-                                    </Typography>
+                                    </Typography> */}
                                     {'   ' + details.description}
                                 </React.Fragment>
                             }
                         />
-
-                        {/* <ListItemText secondary={'hallo'} /> */}
-
+                        <ListItemText
+                            align="end"
+                            style={{ color: `${details.isCanceled ?  'red' : 'green'}` }}
+                            secondary={
+                                <Typography>
+                                    {details.isCanceled ?  'Cenceled' : 'On Time'}
+                                </Typography>
+                            } />
                     </ListItem>
-
                 </Box>
                 <Divider variant="inset" component="li" />
             </List>
