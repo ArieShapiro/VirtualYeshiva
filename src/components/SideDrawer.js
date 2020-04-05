@@ -18,12 +18,12 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ForumIcon from '@material-ui/icons/Forum';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import LanguageIcon from '@material-ui/icons/Language';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 
@@ -52,25 +52,25 @@ export default function SideDrawer() {
     >
       {/* <Router> */}
       <List>
-        <a href="/" style={styles.anchorStyle}>
+        <Link to="/" style={styles.anchorStyle}>
           <ListItem button key='Daily Schedule' >
             <ListItemIcon>
               <Icon icon={listAlt} style={styles.listAlt} />
             </ListItemIcon>
             <ListItemText primary='Daily Schedule' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/haores" style={styles.anchorStyle}>
           <ListItem button key='Haores HaTmimim' >
             <ListItemIcon>
               <EditOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary='Haores HaTmimim' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}></a>
+        <Link to="/daily-shiurim" style={styles.anchorStyle}></Link>
         <ListItem button key='Daily Shiurim' >
           <ListItemIcon>
             <Icon icon={bookIcon} style={styles.bookIconStyle} />
@@ -79,59 +79,59 @@ export default function SideDrawer() {
         </ListItem>
 
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/whatsapp-group" style={styles.anchorStyle}>
           <ListItem button key='WhatsApp Group' onClick={openWhatsApp}>
             <ListItemIcon>
               <Icon icon={whatsappIcon} style={styles.whatsappIconStyle} />
             </ListItemIcon>
             <ListItemText primary='WhatsApp Group' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/end-of-shema" style={styles.anchorStyle}>
           <ListItem button key='End of Shema' >
             <ListItemIcon>
               <AccessAlarmIcon style={styles.whatsappIconStyle} />
             </ListItemIcon>
             <ListItemText primary='End of Shema' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/contact" style={styles.anchorStyle}>
           <ListItem button key='Contact' >
             <ListItemIcon>
               <ContactMailIcon />
             </ListItemIcon>
             <ListItemText primary='Contact' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/chat" style={styles.anchorStyle}>
           <ListItem button key='Chat' >
             <ListItemIcon>
               <ForumIcon style={styles.whatsappIconStyle} />
             </ListItemIcon>
             <ListItemText primary='Chat' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/donate" style={styles.anchorStyle}>
           <ListItem button key='Donate'>
             <ListItemIcon>
               <CreditCardIcon style={styles.whatsappIconStyle} />
             </ListItemIcon>
             <ListItemText primary='Donate' />
           </ListItem>
-        </a>
+        </Link>
         <Divider />
-        <a href="/haores" style={styles.anchorStyle}>
+        <Link to="/language" style={styles.anchorStyle}>
           <ListItem button key='Language'>
             <ListItemIcon>
               <LanguageIcon style={styles.whatsappIconStyle} />
             </ListItemIcon>
             <ListItemText primary='Language' />
           </ListItem>
-        </a>
+        </Link>
 
 
         <Divider />

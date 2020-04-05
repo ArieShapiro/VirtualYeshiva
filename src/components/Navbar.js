@@ -6,9 +6,11 @@ import IconButton from '@material-ui/core/IconButton';
 import NavbarDatePanel from './NavbarDatePanel';
 import SideDrawer from './SideDrawer'
 import Box from '@material-ui/core/Box'
+import { Route } from 'react-router-dom'
 
 const Navbar = () => {
     const classes = useStyles();
+    console.log(window.location.pathname)
     return (
         <div className={classes.root} >
             <AppBar position="static">
@@ -20,7 +22,7 @@ const Navbar = () => {
                         <SideDrawer />
                     </IconButton>
                     <Box style={{ margin: 'auto' }}>
-                        <NavbarDatePanel />
+                        <Route exact path="/" component={NavbarDatePanel} />
                     </Box>
                 </Toolbar>
             </AppBar>

@@ -12,21 +12,11 @@ import {
   Switch,
   Route,
   Link,
-  // useHistory
 } from "react-router-dom"
 import './index.css'
-// import { browserHistory } from 'react-router-dom'
-// import { useHistory } from 'react-router-dom'
-
-
-
 
 function App() {
-  // history.push("/")
-  // browserHistory.push('/')
-  // const history = useHistory()
-  // history.push("/")
-
+//  console.log(window.location.pathname)
   return (
     <div className="App" style={{ position: 'relative', height: '100vh' }}>
       <DateContextProvider>
@@ -38,6 +28,13 @@ function App() {
               <Switch>
                 <Route exact path="/" component={ShiurimList} />
                 <Route path="/haores" component={HaoresList} />
+                <Route path="/daily-shiurim" component={HaoresList} />
+                <Route path="/whatsapp-group" component={HaoresList} />
+                <Route path="/end-of-shema" component={HaoresList} />
+                <Route path="/contact" component={HaoresList} />
+                <Route path="/chat" component={HaoresList} />
+                <Route path="/donate" component={HaoresList} />
+                <Route path="/language" component={HaoresList} />
               </Switch>
             </Box>
             <Footer />

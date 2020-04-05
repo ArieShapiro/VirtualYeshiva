@@ -13,16 +13,17 @@ export default Footer;
 const styles = {
     div: {
         backgroundColor: '#5f5f5f',
-        height: '50px',
+        height: '40px',
         width: '100%',
         bottom: '0',
         position: 'fixed',
-        opacity: '0.8'
+        opacity: '0.9'
 
     },
     p: {
         color: 'white',
         textAlign: 'center',
+        fontSize:'0.8em'
     }
 
 
