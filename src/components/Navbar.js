@@ -10,17 +10,16 @@ import Box from '@material-ui/core/Box'
 const Navbar = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div className={classes.root} >
             <AppBar position="static">
                 <Toolbar>
                     <IconButton
                         edge="start"
-                        className={classes.menuButton}
                         color="inherit"
                         aria-label="menu">
                         <SideDrawer />
                     </IconButton>
-                    <Box style={{margin:'auto'}}>
+                    <Box style={{ margin: 'auto' }}>
                         <NavbarDatePanel />
                     </Box>
                 </Toolbar>
@@ -34,10 +33,6 @@ export default Navbar;
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-    },
-    menuButton: {
-        // marginRight: theme.spacing(2),
-        // fontSize: '1.3em'
     },
     title: {
         flexGrow: 1,

@@ -9,10 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
-import HomeIcon from './icons/HomeIcon'
-import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
-import PermPhoneMsgOutlinedIcon from '@material-ui/icons/PermPhoneMsgOutlined';
-import { Icon, InlineIcon } from '@iconify/react'
+import { Icon } from '@iconify/react'
 import whatsappIcon from '@iconify/icons-mdi/whatsapp'
 import bookIcon from '@iconify/icons-bytesize/book'
 import listAlt from '@iconify/icons-el/list-alt'
@@ -20,6 +17,13 @@ import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ForumIcon from '@material-ui/icons/Forum';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
+import LanguageIcon from '@material-ui/icons/Language';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 
@@ -46,63 +50,93 @@ export default function SideDrawer() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
+      {/* <Router> */}
       <List>
-
-        <ListItem button key={listProperties[0].text} >
-          {listProperties[0].icon}
-          <ListItemText primary={listProperties[0].text} />
-        </ListItem>
+        <a href="/" style={styles.anchorStyle}>
+          <ListItem button key='Daily Schedule' >
+            <ListItemIcon>
+              <Icon icon={listAlt} style={styles.listAlt} />
+            </ListItemIcon>
+            <ListItemText primary='Daily Schedule' />
+          </ListItem>
+        </a>
         <Divider />
-        <ListItem button key='Haores HaTmimim' >
-          <ListItemIcon>
-            <EditOutlinedIcon />
-          </ListItemIcon>
-          <ListItemText primary='Haores HaTmimim' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='Haores HaTmimim' >
+            <ListItemIcon>
+              <EditOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText primary='Haores HaTmimim' />
+          </ListItem>
+        </a>
         <Divider />
+        <a href="/haores" style={styles.anchorStyle}></a>
         <ListItem button key='Daily Shiurim' >
           <ListItemIcon>
             <Icon icon={bookIcon} style={styles.bookIconStyle} />
           </ListItemIcon>
           <ListItemText primary='Daily Shiurim' />
         </ListItem>
+
         <Divider />
-        <ListItem button key='WhatsApp Group' onClick={openWhatsApp}>
-          <ListItemIcon>
-            <Icon icon={whatsappIcon} style={styles.whatsappIconStyle} />
-          </ListItemIcon>
-          <ListItemText primary='WhatsApp Group' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='WhatsApp Group' onClick={openWhatsApp}>
+            <ListItemIcon>
+              <Icon icon={whatsappIcon} style={styles.whatsappIconStyle} />
+            </ListItemIcon>
+            <ListItemText primary='WhatsApp Group' />
+          </ListItem>
+        </a>
         <Divider />
-        <ListItem button key='End of Shema' >
-          <ListItemIcon>
-            <AccessAlarmIcon style={styles.whatsappIconStyle} />
-          </ListItemIcon>
-          <ListItemText primary='End of Shema' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='End of Shema' >
+            <ListItemIcon>
+              <AccessAlarmIcon style={styles.whatsappIconStyle} />
+            </ListItemIcon>
+            <ListItemText primary='End of Shema' />
+          </ListItem>
+        </a>
         <Divider />
-        <ListItem button key='Contact' >
-          <ListItemIcon>
-            <ContactMailIcon />
-          </ListItemIcon>
-          <ListItemText primary='Contact' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='Contact' >
+            <ListItemIcon>
+              <ContactMailIcon />
+            </ListItemIcon>
+            <ListItemText primary='Contact' />
+          </ListItem>
+        </a>
         <Divider />
-        <ListItem button key='Live Chat' >
-          <ListItemIcon>
-            <ForumIcon style={styles.whatsappIconStyle} />
-          </ListItemIcon>
-          <ListItemText primary='Live Chat' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='Chat' >
+            <ListItemIcon>
+              <ForumIcon style={styles.whatsappIconStyle} />
+            </ListItemIcon>
+            <ListItemText primary='Chat' />
+          </ListItem>
+        </a>
         <Divider />
-        <ListItem button key='Donate'>
-          <ListItemIcon>
-            <CreditCardIcon style={styles.whatsappIconStyle} />
-          </ListItemIcon>
-          <ListItemText primary='Donate' />
-        </ListItem>
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='Donate'>
+            <ListItemIcon>
+              <CreditCardIcon style={styles.whatsappIconStyle} />
+            </ListItemIcon>
+            <ListItemText primary='Donate' />
+          </ListItem>
+        </a>
+        <Divider />
+        <a href="/haores" style={styles.anchorStyle}>
+          <ListItem button key='Language'>
+            <ListItemIcon>
+              <LanguageIcon style={styles.whatsappIconStyle} />
+            </ListItemIcon>
+            <ListItemText primary='Language' />
+          </ListItem>
+        </a>
+
+
         <Divider />
       </List>
+      {/* </Router> */}
     </div>
   );
 
@@ -117,6 +151,7 @@ export default function SideDrawer() {
     </div>
   );
 }
+
 
 const useStyles = makeStyles({
   list: {
@@ -140,16 +175,14 @@ const styles = {
   whatsappIconStyle: {
     fontSize: '1.8em'
   },
-  alarmClockIconStyle: {}
+  anchorStyle: {
+    textDecoration: 'inherit',
+    color: 'inherit'
+
+  }
 }
 
-const listProperties = [
-  {
-    text: 'Daily Schedule',
-    icon: <ListItemIcon><Icon icon={listAlt} style={styles.listAlt} /></ListItemIcon>,
-    link: '',
-  }
-]
+
 
 
 
