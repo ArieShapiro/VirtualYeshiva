@@ -18,12 +18,7 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ForumIcon from '@material-ui/icons/Forum';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import LanguageIcon from '@material-ui/icons/Language';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -52,7 +47,7 @@ export default function SideDrawer() {
     >
       {/* <Router> */}
       <List>
-        <Link to="/" style={styles.anchorStyle}>
+        <Link to="/VirtualYeshiva/" style={styles.anchorStyle}>
           <ListItem button key='Daily Schedule' >
             <ListItemIcon>
               <Icon icon={listAlt} style={styles.listAlt} />
@@ -61,7 +56,7 @@ export default function SideDrawer() {
           </ListItem>
         </Link>
         <Divider />
-        <Link to="/haores" style={styles.anchorStyle}>
+        <Link to="/VirtualYeshiva/haores" style={styles.anchorStyle}>
           <ListItem button key='Haores HaTmimim' >
             <ListItemIcon>
               <EditOutlinedIcon />

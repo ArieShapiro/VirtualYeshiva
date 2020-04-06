@@ -20,6 +20,7 @@ const ShiurimList = () => {
     return (
         <div>
             <Box my={1.5}>
+                {/* <img src={require("../assets/zoom.jpg")} alt="zoom logo" width="30"/> */}
                 <a href="https://zoom.us/j/621516973" style={anchorStyle} target="_blank">
                     <Chip
                         variant="outlined"

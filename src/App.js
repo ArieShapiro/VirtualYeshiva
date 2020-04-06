@@ -26,8 +26,8 @@ function App() {
             <Logo />
             <Box align="center">
               <Switch>
-                <Route exact path="/" component={ShiurimList} />
-                <Route path="/haores" component={HaoresList} />
+                <Route exact path="/VirtualYeshiva/" component={ShiurimList} />
+                <Route path="/VirtualYeshiva/haores" component={HaoresList} />
                 <Route path="/daily-shiurim" component={HaoresList} />
                 <Route path="/whatsapp-group" component={HaoresList} />
                 <Route path="/end-of-shema" component={HaoresList} />
