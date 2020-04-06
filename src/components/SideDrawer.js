@@ -65,13 +65,14 @@ export default function SideDrawer() {
           </ListItem>
         </Link>
         <Divider />
-        <Link to="/daily-shiurim" style={styles.anchorStyle}></Link>
+        <Link to="/daily-shiurim" style={styles.anchorStyle}>
         <ListItem button key='Daily Shiurim' >
           <ListItemIcon>
             <Icon icon={bookIcon} style={styles.bookIconStyle} />
           </ListItemIcon>
           <ListItemText primary='Daily Shiurim' />
         </ListItem>
+        </Link>
 
         <Divider />
         <Link to="/whatsapp-group" style={styles.anchorStyle}>
