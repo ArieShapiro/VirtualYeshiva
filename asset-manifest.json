@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/VirtualYeshiva/static/css/main.61b3c907.chunk.css",
-    "main.js": "/VirtualYeshiva/static/js/main.a0e9f43a.chunk.js",
-    "main.js.map": "/VirtualYeshiva/static/js/main.a0e9f43a.chunk.js.map",
+    "main.js": "/VirtualYeshiva/static/js/main.bacaadb0.chunk.js",
+    "main.js.map": "/VirtualYeshiva/static/js/main.bacaadb0.chunk.js.map",
     "runtime-main.js": "/VirtualYeshiva/static/js/runtime-main.2154ca34.js",
     "runtime-main.js.map": "/VirtualYeshiva/static/js/runtime-main.2154ca34.js.map",
     "static/css/2.a500b61f.chunk.css": "/VirtualYeshiva/static/css/2.a500b61f.chunk.css",
     "static/js/2.5ace8abc.chunk.js": "/VirtualYeshiva/static/js/2.5ace8abc.chunk.js",
     "static/js/2.5ace8abc.chunk.js.map": "/VirtualYeshiva/static/js/2.5ace8abc.chunk.js.map",
     "index.html": "/VirtualYeshiva/index.html",
-    "precache-manifest.3a3581fe777be7c7121921b85477e583.js": "/VirtualYeshiva/precache-manifest.3a3581fe777be7c7121921b85477e583.js",
+    "precache-manifest.7d9dc5a075acc7d1aa360cab0b194eba.js": "/VirtualYeshiva/precache-manifest.7d9dc5a075acc7d1aa360cab0b194eba.js",
     "service-worker.js": "/VirtualYeshiva/service-worker.js",
     "static/css/2.a500b61f.chunk.css.map": "/VirtualYeshiva/static/css/2.a500b61f.chunk.css.map",
     "static/css/main.61b3c907.chunk.css.map": "/VirtualYeshiva/static/css/main.61b3c907.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.a500b61f.chunk.css",
     "static/js/2.5ace8abc.chunk.js",
     "static/css/main.61b3c907.chunk.css",
-    "static/js/main.a0e9f43a.chunk.js"
+    "static/js/main.bacaadb0.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "816f7923a1dafd421c4694d80d4dd9ca",
+    "revision": "d9678e2fa6df515dba8c9043f41c615a",
     "url": "/VirtualYeshiva/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/VirtualYeshiva/static/css/2.a500b61f.chunk.css"
   },
   {
-    "revision": "aea306e2f9d396994c3d",
+    "revision": "a2c98d4d068126094575",
     "url": "/VirtualYeshiva/static/css/main.61b3c907.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/VirtualYeshiva/static/js/2.5ace8abc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aea306e2f9d396994c3d",
-    "url": "/VirtualYeshiva/static/js/main.a0e9f43a.chunk.js"
+    "revision": "a2c98d4d068126094575",
+    "url": "/VirtualYeshiva/static/js/main.bacaadb0.chunk.js"
   },
   {
     "revision": "7cdff5bda0bb5ccb3517",
