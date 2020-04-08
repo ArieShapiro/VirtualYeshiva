@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/VirtualYeshiva/precache-manifest.7d9dc5a075acc7d1aa360cab0b194eba.js"
+  "/VirtualYeshiva/precache-manifest.1a6ce7cc332143bca95a6fd656f6a263.js"
 );
 
 self.addEventListener('message', (event) => {

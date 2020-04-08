@@ -22,7 +22,7 @@ const Navbar = () => {
                         <SideDrawer />
                     </IconButton>
                     <Box style={{ margin: 'auto' }}>
-                        <Route exact path="/" component={NavbarDatePanel} />
+                        <Route exact path="/VirtualYeshiva/" component={NavbarDatePanel} />
                     </Box>
                 </Toolbar>
             </AppBar>

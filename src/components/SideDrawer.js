@@ -34,8 +34,8 @@ export default function SideDrawer() {
   };
 
   const openWhatsApp = () => {
-    console.log('hi')
-    window.open('https://www.whatsapp.com/', '_blank');
+    // console.log('hi')
+    // window.open('https://www.whatsapp.com/', '_blank');
   }
 
   const list = () => (
