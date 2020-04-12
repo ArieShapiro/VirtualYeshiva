@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:8080",
   "homepage": "http://Arieshapiro.github.io/VirtualYeshiva",
   "name": "virtual-yeshiva",
   "version": "0.1.0",
@@ -14,6 +15,7 @@
     "axios": "^0.19.2",
     "date-fns": "^2.0.0-beta.5",
     "hebrew-date": "^1.0.5",
+    "nodemon": "^2.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
