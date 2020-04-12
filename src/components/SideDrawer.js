@@ -47,7 +47,7 @@ export default function SideDrawer() {
     >
       {/* <Router> */}
       <List>
-        <Link to="/VirtualYeshiva/" style={styles.anchorStyle}>
+        <Link to="/" style={styles.anchorStyle}>
           <ListItem button key='Daily Schedule' >
             <ListItemIcon>
               <Icon icon={listAlt} style={styles.listAlt} />
@@ -56,7 +56,7 @@ export default function SideDrawer() {
           </ListItem>
         </Link>
         <Divider />
-        <Link to="/VirtualYeshiva/haores" style={styles.anchorStyle}>
+        <Link to="/haores" style={styles.anchorStyle}>
           <ListItem button key='Haores HaTmimim' >
             <ListItemIcon>
               <EditOutlinedIcon />
