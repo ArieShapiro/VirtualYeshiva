@@ -3,24 +3,21 @@ import { ShiurimContext } from '../contexts/ShiurimContext'
 import { DateContext } from '../contexts/DateContext'
 import ShiurDetails from './ShiurDetails';
 import Chip from '@material-ui/core/Chip'
-import Avatar from '@material-ui/core/Avatar';
-import DoneIcon from '@material-ui/icons/Done'
-import VideocamIcon from '@material-ui/icons/Videocam';
 import Box from '@material-ui/core/Box'
 
 
 const ShiurimList = () => {
     const { date, dispatch } = useContext(DateContext)
     const { shiurim } = useContext(ShiurimContext)
-
-    const handleDelete = () => {
-        console.info('You clicked the delete icon.');
-    };
+    const shiurimToDisplay = (shiurim.filter(shiur => {
+        return shiur.date.getDate() === date.greg.getDate()
+    })).map(shiur => {
+        return <ShiurDetails details={shiur} key={shiur.id} />
+    })
 
     return (
         <div>
             <Box my={1.5}>
-                {/* <img src={require("../assets/zoom.jpg")} alt="zoom logo" width="30"/> */}
                 <a href="https://zoom.us/j/621516973" style={anchorStyle} target="_blank">
                     <Chip
                         variant="outlined"
@@ -31,11 +28,7 @@ const ShiurimList = () => {
                     />
                 </a>
             </Box>
-            {(shiurim.filter(shiur => {
-                return shiur.date.getDate() === date.greg.getDate()
-            })).map(shiur => {
-                return <ShiurDetails details={shiur} />
-            })}
+            {shiurimToDisplay.length ? shiurimToDisplay : <h3>No Shiurim Scheduled for this date</h3>}
         </div>
     );
 }
@@ -45,6 +38,5 @@ export default ShiurimList;
 const anchorStyle = {
     textDecoration: 'inherit',
     color: 'inherit',
-    // margin:'30px'
 }
 

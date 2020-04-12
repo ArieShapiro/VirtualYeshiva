@@ -16,35 +16,9 @@ export default ShiurimContextProvider;
 
 const initShiurim = () => {
     return [
-        { isCanceled: false, date: new Date(), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date(), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date(), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date(), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: true, date: new Date(), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: true, date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: true, date: new Date((new Date()).setDate((new Date()).getDate()+1)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+2)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+2)), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+3)), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+4)), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+5)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chavruta', time: '13:30', description: 'Free choice' },
-        { isCanceled: false, date: new Date((new Date()).setDate((new Date()).getDate()+6)), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
-        
+        { id: 1, isCanceled: false, date: new Date(2020, 3, 13), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe' },
+        { id: 2, isCanceled: false, date: new Date(2020, 3, 14), title: 'Chassidus', time: '9:00', description: 'Maamar from the Rebbe'  },
+        { id: 3, isCanceled: true, date: new Date(2020, 3, 19), title: 'Chavruta', time: '20:00', description: 'Hagalat Kelim' },
         
     ]
 }

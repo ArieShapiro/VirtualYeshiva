@@ -34,7 +34,6 @@ export default function SideDrawer() {
   };
 
   const openWhatsApp = () => {
-    // console.log('hi')
     // window.open('https://www.whatsapp.com/', '_blank');
   }
 
@@ -45,7 +44,6 @@ export default function SideDrawer() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      {/* <Router> */}
       <List>
         <Link to="/" style={styles.anchorStyle}>
           <ListItem button key='Daily Schedule' >

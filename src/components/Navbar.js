@@ -10,7 +10,6 @@ import { Route } from 'react-router-dom'
 
 const Navbar = () => {
     const classes = useStyles();
-    console.log(window.location.pathname)
     return (
         <div className={classes.root} >
             <AppBar position="static">
@@ -22,7 +21,7 @@ const Navbar = () => {
                         <SideDrawer />
                     </IconButton>
                     <Box style={{ margin: 'auto' }}>
-                        <Route exact path="/VirtualYeshiva/" component={NavbarDatePanel} />
+                        <Route exact path="/" component={NavbarDatePanel} />
                     </Box>
                 </Toolbar>
             </AppBar>
