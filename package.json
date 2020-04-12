@@ -1,6 +1,5 @@
 {
   "proxy": "http://localhost:8080",
-  "homepage": "http://Arieshapiro.github.io/VirtualYeshiva",
   "name": "virtual-yeshiva",
   "version": "0.1.0",
   "private": true,
