@@ -1,18 +1,30 @@
 const express = require('express');
+const app = express();
 const favicon = require('express-favicon');
 const path = require('path');
 const port = process.env.PORT || 8080;
-const app = express();
+const socket = require('socket.io')
+
 app.use(favicon(__dirname + '/build/favicon.ico'));
-// the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
-app.get('/ping', function (req, res) {
- return res.send('pong');
-});
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-app.listen(port, ()=>{
-    console.log('Listening on port: ' + port + '...')
-});
+})
+
+app.listen(port, () => {
+  console.log('Listening on port: ' + port + '...')
+})
+
+let io = socket(server)
+io.on('connection', socket => {
+  console.log('Made Socket connection', socket.id)
+
+  socket.on('chat', data => {
+    io.sockets.emit('chat', data)
+  })
+  socket.on('typing', data => {
+    socket.broadcast.emit('typing', data)
+  })
+})
