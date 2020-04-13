@@ -17,14 +17,14 @@ app.listen(port, () => {
   console.log('Listening on port: ' + port + '...')
 })
 
-let io = socket(server)
-io.on('connection', socket => {
-  console.log('Made Socket connection', socket.id)
+// let io = socket(app)
+// io.on('connection', socket => {
+//   console.log('Made Socket connection', socket.id)
 
-  socket.on('chat', data => {
-    io.sockets.emit('chat', data)
-  })
-  socket.on('typing', data => {
-    socket.broadcast.emit('typing', data)
-  })
-})
+//   socket.on('chat', data => {
+//     io.sockets.emit('chat', data)
+//   })
+//   socket.on('typing', data => {
+//     socket.broadcast.emit('typing', data)
+//   })
+// })
