@@ -1,27 +1,54 @@
-import React from 'react'
-// import './Chat.css'
-import { Icon, InlineIcon } from '@iconify/react';
-import buildingConstruction from '@iconify/icons-noto/building-construction';
+import React, { useState } from 'react'
+import io from 'socket.io-client'
+
+const port = process.env.PORT || 8080
+const socket = io.connect(`http://localhost:${port}`)
 
 const Chat = () => {
+    const [nickname, setNickname] = useState('')
+    const [message, setMessage] = useState('')
+    const [output, setOutput] = useState('')
+    const [feedback, setFeedback] = useState('')
+
+    const nahdleSubmit = e => {
+        e.preventDefault()
+        socket.emit('chat', {
+            nickname: nickname,
+            message: message
+        })
+        setMessage('')
+    }
+
+    socket.on('chat', data => {
+        console.log(data.nickname)
+        let outputData = data.nickname + ':  ' + data.message
+        setOutput(output + outputData)
+    })
     return (
-        <div id="mario-chat">
-            <div id="chat-window">
-                <Icon icon={buildingConstruction} style={styles} />
-                <div id="output"></div>
-                <div id="feedback"></div>
+        <div>
+            <div>
+                <div>
+
+                    {output}
+
+                </div>
+
+                <div>
+
+                    {feedback}
+
+                </div>
+
             </div>
-            <input type="text" id="handle" placeholder="NickName" />
-            <input id="message" type="text" placeholder="message" />
-            <button id="send">Send</button>
+
+            <form onSubmit={nahdleSubmit}>
+                <input type="text" value={nickname} onChange={e => setNickname(e.target.value)} placeholder="NickName" />
+                <input type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder="message" />
+                <input type="submit" value="Send" />
+            </form>
+
         </div>
     );
 }
 
 export default Chat
-
-const styles = {
-    fontSize: '7em',
-    marginTop: '35px'
-
-}
